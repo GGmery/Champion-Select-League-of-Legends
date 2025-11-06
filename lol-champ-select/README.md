@@ -57,3 +57,21 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## Json usados
+Todos los personajes:
+https://ddragon.leagueoflegends.com/cdn/14.10.1/data/es_ES/champion.json
+
+Información de cada personaje:
+https://ddragon.leagueoflegends.com/cdn/14.10.1/data/es_ES/champion/Orianna.json
+
+Items:
+https://ddragon.leagueoflegends.com/cdn/15.22.1/data/es_ES/item.json
+
+Runas:
+https://ddragon.leagueoflegends.com/cdn/14.10.1/data/es_ES/runesReforged.json
+
+Hechizos:
+https://ddragon.leagueoflegends.com/cdn/14.10.1/data/es_ES/summoner.json
+
