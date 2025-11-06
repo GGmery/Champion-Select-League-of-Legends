@@ -1,0 +1,38 @@
+/* footer.component.css */
+.footer-container {
+  background-color: #0a0a0c;
+  color: #bfbfbf;
+  padding: 20px 0;
+  font-size: 12px;
+  width: 100%;
+  border-top: 1px solid #2a2a2d;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 6px 0;
+}
+
+p.copyright {
+  opacity: 0.6;
+  font-size: 11px;
+}
+
+a {
+  color: #c8a356;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 6px #c8a356;
+}
