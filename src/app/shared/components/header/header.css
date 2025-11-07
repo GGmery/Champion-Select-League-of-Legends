@@ -1,0 +1,37 @@
+.header-container {
+  background-color: #0a0a0c;
+  color: #c8a356;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2a2a2d;
+  font-family: 'Cinzel', serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 12px;
+}
+
+.logo h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.nav-links a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #c8a356;
+  font-weight: bold;
+  transition: text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+  text-shadow: 0 0 8px #c8a356;
+}
