@@ -1,0 +1,41 @@
+.sidebar-container {
+  width: 260px;
+  background-color: #0f0f11;
+  color: #c8a356;
+  padding: 24px;
+  font-family: 'Cinzel', serif;
+  border-right: 1px solid #2a2a2d;
+}
+
+.sidebar-container h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.filter-group {
+  margin-bottom: 24px;
+}
+
+.filter-group h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.filter-group ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.filter-group li {
+  margin-bottom: 12px;
+}
+
+select, button {
+  width: 100%;
+  padding: 6px;
+  background-color: #1a1a1d;
+  color: #c8a356;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-family: inherit;
+}
