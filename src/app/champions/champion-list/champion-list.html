@@ -1,1 +1,6 @@
-<p>champion-list works!</p>
+<div class="champion-grid">
+  <div class="champion-card" *ngFor="let champion of champions">
+    <img [src]="'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/champion/' + champion.image.full" alt="{{ champion.name }}">
+    <p>{{ champion.name }}</p>
+  </div>
+</div>

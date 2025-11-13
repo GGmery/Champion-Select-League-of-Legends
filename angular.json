@@ -23,7 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+             "src/app/shared/components/sidebar/sidebar.css",
+              "src/app/app.css" 
             ]
           },
           "configurations": {
@@ -80,7 +82,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/shared/components/sidebar/sidebar.css",
+              "src/app/app.css"
             ]
           }
         }

@@ -1,0 +1,59 @@
+:host {
+  display: block;   /* importante para que el componente ocupe todo el ancho disponible */
+  width: 100%;
+}
+
+
+.champion-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 campeones por fila */
+  gap: 15px;
+  width: 100%; /* Importante */
+}
+
+.champion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.champion-card img {
+  width: 100%;
+  max-width: 80px;
+  border-radius: 5px;
+}
+
+.champion-card p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.champion-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive: menos columnas en pantallas pequeñas */
+@media (max-width: 1200px) {
+  .champion-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .champion-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .champion-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

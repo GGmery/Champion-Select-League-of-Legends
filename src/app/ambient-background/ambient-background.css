@@ -1,0 +1,19 @@
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* se asegura que esté detrás de todo */
+  overflow: hidden;
+  pointer-events: none; /* permite interactuar con header, sidebar, footer */
+}
+
+.content--canvas canvas {
+  position: absolute; /* absolute dentro del host */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}

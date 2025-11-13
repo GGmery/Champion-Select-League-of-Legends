@@ -1,11 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ChampionService, Champion } from '../../services/champion';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-champion-list',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, HttpClientModule], // 👈 Importante para *ngFor y HttpClient
   templateUrl: './champion-list.html',
-  styleUrl: './champion-list.css',
+  styleUrls: ['./champion-list.css']
 })
-export class ChampionList {
+export class ChampionListComponent implements OnInit {
+  champions: Champion[] = [];
 
+  constructor(private championService: ChampionService) {}
+
+  ngOnInit(): void {
+    this.championService.getChampions().subscribe(data => {
+      this.champions = data;
+    });
+  }
 }

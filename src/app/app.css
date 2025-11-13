@@ -1,3 +1,76 @@
+.glass-container {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.034);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  backdrop-filter: blur(20px) saturate(150%);
+  
+  padding: 20px;
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+}
+
 .main-layout {
+  display: grid;
+  grid-template-columns: auto 2fr; /* Sidebar fijo + Main flexible */
+  gap: 0;
+  /* No flex:1 para que main no ocupe todo el height */
+  min-height: auto;
+}
+
+/* Sidebar */
+app-sidebar {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  width: fit-content;
+  overflow: hidden;  /* NO scroll */
+}
+
+/* Main */
+app-main {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 600px; /* Main más corto */
+  overflow-y: auto;  /* scroll solo si hay demasiados campeones */
+  width: 100%;
+
+  /* Chrome, Edge y Safari */
+  &::-webkit-scrollbar {
+    width: 8px;                /* ancho de la barra */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;    /* fondo transparente */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); /* color del pulgar */
+    border-radius: 4px;        /* bordes redondeados */
+    border: none;               /* sin borde extra */
+  }
+
+  /* Firefox */
+  & {
+    scrollbar-width: thin;      /* barra más delgada */
+    scrollbar-color: rgba(255,255,255,0.3) transparent; /* color pulgar y track */
+  }
+
+}
+
+/* Contenido dentro del main */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

@@ -1,6 +1,7 @@
 .sidebar-container {
   width: 260px;
   background-color: #0f0f11;
+  opacity: 80%;
   color: #c8a356;
   padding: 24px;
   font-family: 'Cinzel', serif;

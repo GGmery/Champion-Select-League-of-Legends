@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* HTML y body ocupan toda la pantalla y permiten crecer horizontalmente */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* app-root con borde externo y más ancho */
+app-root {
+    border-radius: 30px;          /* borde solo externo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;           /* altura mínima de pantalla */
+    width: 1400px;               /* MÁS ANCHO horizontal */
+    max-width: 95%;              /* para pantallas pequeñas */
+    margin: 0 auto;              /* centrar horizontalmente */
+    overflow: visible;           /* scroll solo donde corresponda */
+    background: transparent;
+}
