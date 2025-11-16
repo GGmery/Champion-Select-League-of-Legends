@@ -1,4 +1,3 @@
-// app.routes.ts
 import { Routes } from '@angular/router';
 import { ChampionListComponent } from './champions/champion-list/champion-list';
 import { ChampionDetail } from './champions/champion-detail/champion-detail';

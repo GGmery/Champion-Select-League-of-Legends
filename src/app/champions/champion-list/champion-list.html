@@ -1,6 +1,15 @@
 <div class="champion-grid">
-  <div class="champion-card" *ngFor="let champion of champions">
-    <img [src]="'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/champion/' + champion.image.full" alt="{{ champion.name }}">
+  <div
+    class="champion-card"
+    *ngFor="let champion of filteredChampions"
+    [routerLink]="['/champions', champion.id]"
+  >
+    <img
+      [src]="'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/champion/' + champion.image.full"
+      [alt]="champion.name"
+    />
     <p>{{ champion.name }}</p>
+    <small class="hidden">Dificultad: {{ champion.info.difficulty }}</small>
+    <small class="hidden">Rol: {{ champion.tags.join(', ') }}</small>
   </div>
 </div>

@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-body',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './main.html',
-  styleUrls: ['./main.css']
+  templateUrl: './body.html',
+  styleUrls: ['./body.css']
 })
-export class Main { }
+export class Body {}

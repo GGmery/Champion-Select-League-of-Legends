@@ -1,0 +1,130 @@
+:host {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Cinzel', serif;
+}
+
+/* Cabecera con splash y título */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #c8a356;
+}
+
+.header .subtitle {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* Lore */
+.lore {
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+/* Pasiva y habilidades */
+.passive, .spells {
+  margin: 20px 0;
+}
+
+.ability-row, .spell-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.ability-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+}
+
+.ability-name {
+  font-weight: bold;
+  color: #c8a356;
+}
+
+/* Skins */
+.skins {
+  margin: 30px 0;
+}
+
+.skins-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.skins-grid figure {
+  text-align: center;
+}
+
+.skins-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skins-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.skins-grid figcaption {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .skins-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .skins-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}

@@ -4,13 +4,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* se asegura que esté detrás de todo */
+  z-index: -1;
   overflow: hidden;
-  pointer-events: none; /* permite interactuar con header, sidebar, footer */
+  pointer-events: none;
 }
 
 .content--canvas canvas {
-  position: absolute; /* absolute dentro del host */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;

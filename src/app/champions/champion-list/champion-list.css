@@ -1,14 +1,17 @@
 :host {
-  display: block;   /* importante para que el componente ocupe todo el ancho disponible */
+  display: block;
   width: 100%;
 }
 
+.hidden {
+  display:none;
+}
 
 .champion-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 campeones por fila */
+  grid-template-columns: repeat(5, 1fr);
   gap: 15px;
-  width: 100%; /* Importante */
+  width: 100%;
 }
 
 .champion-card {
@@ -41,7 +44,6 @@
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* Responsive: menos columnas en pantallas pequeñas */
 @media (max-width: 1200px) {
   .champion-grid {
     grid-template-columns: repeat(4, 1fr);

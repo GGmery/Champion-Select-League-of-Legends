@@ -1,1 +1,64 @@
-<p>champion-detail works!</p>
+ <button class="back-button" (click)="goBack()">✕</button>
+<div *ngIf="error" class="error">
+  <p>{{ error }}</p>
+</div>
+
+<div *ngIf="championData" class="champion-detail">
+  <div class="header">
+    <img
+      class="splash"
+      [src]="'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + championData.id + '_0.jpg'"
+      [alt]="championData.name"
+    />
+    <h2>{{ championData.name }}</h2>
+    <p class="subtitle">{{ championData.title }}</p>
+  </div>
+
+  <section class="lore">
+    <h3>Lore</h3>
+    <p>{{ championData.lore }}</p>
+  </section>
+
+  <section class="passive">
+    <h3>Pasiva</h3>
+    <div class="ability-row">
+      <img
+        class="ability-icon"
+        [src]="'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/passive/' + championData.passive.image.full"
+        [alt]="championData.passive.name"
+      />
+      <div>
+        <p class="ability-name">{{ championData.passive.name }}</p>
+        <p>{{ championData.passive.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="spells">
+    <h3>Habilidades</h3>
+    <div *ngFor="let spell of championData.spells" class="spell-item">
+      <img
+        class="ability-icon"
+        [src]="'https://ddragon.leagueoflegends.com/cdn/14.10.1/img/spell/' + spell.image.full"
+        [alt]="spell.name"
+      />
+      <div>
+        <p class="ability-name">{{ spell.name }}</p>
+        <p>{{ spell.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="skins">
+    <h3>Aspectos</h3>
+    <div class="skins-grid">
+      <figure *ngFor="let skin of championData.skins">
+        <img
+          [src]="'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + championData.id + '_' + skin.num + '.jpg'"
+          [alt]="skin.name"
+        />
+        <figcaption>{{ skin.name }}</figcaption>
+      </figure>
+    </div>
+  </section>
+</div>

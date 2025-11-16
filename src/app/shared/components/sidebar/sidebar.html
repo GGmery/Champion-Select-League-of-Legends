@@ -8,7 +8,7 @@
     <ul>
       <li>
         <label for="difficulty">Dificultad:</label>
-        <select id="difficulty">
+        <select id="difficulty" (change)="applyFilter($event, 'difficulty')">
           <option value="">Todos</option>
           <option value="easy">Fácil</option>
           <option value="medium">Media</option>
@@ -17,7 +17,7 @@
       </li>
       <li>
         <label for="role">Rol:</label>
-        <select id="role">
+        <select id="role" (change)="applyFilter($event, 'role')">
           <option value="">Todos</option>
           <option value="assassin">Asesino</option>
           <option value="fighter">Luchador</option>

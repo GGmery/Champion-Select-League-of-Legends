@@ -1,30 +1,40 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
-// Interfaz para un campeón
 export interface Champion {
+  key: string;
   id: string;
   name: string;
-  image: {
-    full: string;
-  };
+  title: string;
+  image: { full: string };
+  info: { difficulty: number; attack: number; defense: number; magic: number };
+  tags: string[];
 }
 
-// Servicio para obtener campeones
 @Injectable({ providedIn: 'root' })
 export class ChampionService {
-  private url = 'https://ddragon.leagueoflegends.com/cdn/14.10.1/data/es_ES/champion.json';
-
   constructor(private http: HttpClient) {}
 
   getChampions(): Observable<Champion[]> {
-    return new Observable(observer => {
-      this.http.get<any>(this.url).subscribe(data => {
-        const champions: Champion[] = Object.values(data.data);
-        observer.next(champions);
-        observer.complete();
-      });
-    });
+    return this.http
+      .get<any>('https://ddragon.leagueoflegends.com/cdn/14.10.1/data/es_ES/champion.json')
+      .pipe(
+        map(res =>
+          Object.keys(res.data).map(key => {
+            const champ = res.data[key];
+            return {
+              key: champ.key,
+              id: champ.id,
+              name: champ.name,
+              title: champ.title,
+              image: champ.image,
+              info: champ.info,
+              tags: champ.tags
+            } as Champion;
+          })
+        )
+      );
   }
 }
