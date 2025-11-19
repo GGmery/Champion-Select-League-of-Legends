@@ -6,20 +6,12 @@
   background: rgba(255, 255, 255, 0.034);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
   backdrop-filter: blur(20px) saturate(150%);
-  
   padding: 20px;
-  
-  .app-container {
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    overflow: hidden;
-  }
 }
 
 .main-layout {
   display: grid;
-  grid-template-columns: auto 2fr; 
+  grid-template-columns: 350px 2fr; 
   gap: 0;
   min-height: auto;
 }
@@ -31,40 +23,31 @@ app-sidebar {
   overflow: hidden;
 }
 
-app-body {
+
+.content-container {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-height: 600px;
   overflow-y: auto;
-  width: 100%;
-
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    border: none;
-  }
-
-  & {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255,255,255,0.3) transparent;
-  }
-
+  width: 649px;
+  padding: 20px;
+  max-height: 600px;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.content-container::-webkit-scrollbar {
+  width: 8px;
+}
+.content-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.content-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+.content-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.3) transparent;
 }

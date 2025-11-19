@@ -19,7 +19,7 @@ export class ChampionService {
 
   getChampions(): Observable<Champion[]> {
     return this.http
-      .get<any>('https://ddragon.leagueoflegends.com/cdn/14.10.1/data/es_ES/champion.json')
+      .get<any>('https://ddragon.leagueoflegends.com/cdn/15.23.1/data/es_ES/champion.json')
       .pipe(
         map(res =>
           Object.keys(res.data).map(key => {

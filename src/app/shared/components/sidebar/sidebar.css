@@ -7,7 +7,10 @@
   font-family: 'Cinzel', serif;
   border-right: 1px solid #2a2a2d;
 }
-
+.sidebar-container a {
+  color: #c8a356;
+  font-family: 'Cinzel', serif;
+}
 .sidebar-container h2 {
   font-size: 20px;
   margin-bottom: 16px;

@@ -35,7 +35,7 @@ export class ChampionDetail implements OnInit {
   }
 
   fetchChampionData(): void {
-    const url = `https://ddragon.leagueoflegends.com/cdn/14.10.1/data/es_ES/champion/${this.championId}.json`;
+    const url = `https://ddragon.leagueoflegends.com/cdn/15.23.1/data/es_ES/champion/${this.championId}.json`;
 
     this.http.get<any>(url).subscribe({
       next: (data) => {

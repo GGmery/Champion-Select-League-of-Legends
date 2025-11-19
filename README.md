@@ -61,17 +61,17 @@ For more information on using the Angular CLI, including detailed command refere
 
 ## Json usados
 Todos los personajes:
-https://ddragon.leagueoflegends.com/cdn/14.10.1/data/es_ES/champion.json
+https://ddragon.leagueoflegends.com/cdn/15.23.1/data/es_ES/champion.json
 
 Información de cada personaje:
-https://ddragon.leagueoflegends.com/cdn/14.10.1/data/es_ES/champion/Orianna.json
+https://ddragon.leagueoflegends.com/cdn/15.23.1/data/es_ES/champion/Orianna.json
 
 Items:
-https://ddragon.leagueoflegends.com/cdn/15.22.1/data/es_ES/item.json
+https://ddragon.leagueoflegends.com/cdn/15.23.1/data/es_ES/item.json
 
 Runas:
-https://ddragon.leagueoflegends.com/cdn/14.10.1/data/es_ES/runesReforged.json
+https://ddragon.leagueoflegends.com/cdn/15.23.1/data/es_ES/runesReforged.json
 
 Hechizos:
-https://ddragon.leagueoflegends.com/cdn/14.10.1/data/es_ES/summoner.json
+https://ddragon.leagueoflegends.com/cdn/15.23.1/data/es_ES/summoner.json
 

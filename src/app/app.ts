@@ -4,12 +4,11 @@ import { AmbientBackgroundComponent } from './ambient-background/ambient-backgro
 import { FooterComponent } from './shared/components/footer/footer';
 import { HeaderComponent } from './shared/components/header/header';
 import { Sidebar } from "./shared/components/sidebar/sidebar";
-import { Body } from './shared/components/body/body';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AmbientBackgroundComponent, Body, HeaderComponent, FooterComponent, Sidebar],
+  imports: [RouterOutlet, AmbientBackgroundComponent, HeaderComponent, FooterComponent, Sidebar],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

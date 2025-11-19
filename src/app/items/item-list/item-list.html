@@ -1,1 +1,21 @@
-<p>Próximamente</p>
+<div class="search-bar">
+  <input
+    type="text"
+    placeholder="Buscar items..."
+    (input)="searchItems($event)"
+  />
+</div>
+
+<div class="item-grid">
+  <div
+    class="item-card"
+    *ngFor="let item of filteredItems"
+    [routerLink]="['/items', item.id]"
+  >
+    <img
+      [src]="'https://ddragon.leagueoflegends.com/cdn/15.23.1/img/item/' + item.image.full"
+      [alt]="item.name"
+    />
+    <p>{{ item.name }}</p>
+  </div>
+</div>
