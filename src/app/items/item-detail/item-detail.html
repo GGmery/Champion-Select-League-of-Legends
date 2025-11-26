@@ -8,13 +8,4 @@
 
   <p><strong>Precio:</strong> {{ item.gold.total }} oro</p>
   <p><strong>Se vende por:</strong> {{ item.gold.sell }} oro</p>
-
-  <div *ngIf="item.into?.length">
-    <h3>Se puede mejorar en:</h3>
-    <ul>
-      <li *ngFor="let upgrade of item.into">
-        <a [routerLink]="['/items', upgrade]">Item {{ upgrade }}</a>
-      </li>
-    </ul>
-  </div>
 </div>
